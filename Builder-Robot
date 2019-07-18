@@ -16,39 +16,32 @@ class Robot {
 
     public static class RobotBuilder {
 
-        /* write your code here (fields) */
         private String cpu;
         private int legs;
         private int hands;
         private int eyes;
-
-        /* write your code here (constructor) */
+        
         RobotBuilder() {
 
         }
 
         void setCPU(String cpu) {
-            /* write your code here */
             this.cpu = cpu;
         }
 
         void setLegs(int legs) {
-            /* write your code here */
             this.legs = legs;
         }
 
         void setHands(int hands) {
-            /* write your code here */
             this.hands = hands;
         }
 
         void setEyes(int eyes) {
-            /* write your code here */
             this.eyes = eyes;
         }
 
         Robot build() {
-            /* write your code here */
             return new Robot(cpu, legs, hands, eyes);
         }
     }
@@ -65,8 +58,7 @@ class Robot {
 class TestDrive {
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
-        final Robot.RobotBuilder robotBuilder = /* write your code here */
-            new Robot.RobotBuilder();
+        final Robot.RobotBuilder robotBuilder = new Robot.RobotBuilder();
 
         /* Set CPU */
         robotBuilder.setCPU("Intel Core i5");
@@ -83,8 +75,7 @@ class TestDrive {
         int eyes = scanner.nextInt();
         robotBuilder.setEyes(eyes);
 
-        Robot robot = /* write your code here */
-            robotBuilder.build();
+        Robot robot = robotBuilder.build();
 
         System.out.println(robot);
         scanner.close();
