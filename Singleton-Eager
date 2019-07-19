@@ -1,0 +1,11 @@
+class Counter {
+    // write your code here
+    private static final Counter instance = new Counter();
+    public int counter;
+    
+    private Counter() {}
+
+    public static Counter getInstance() {
+        return instance; 
+    }
+}
